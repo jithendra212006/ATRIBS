@@ -163,17 +163,16 @@ export default function ChatbotCharacter({ className = "" }) {
     botRoot.add(rightRing);
 
     let animationId;
-    let clock = new THREE.Clock();
+    const startTime = performance.now();
 
     const animate = () => {
       animationId = requestAnimationFrame(animate);
-      const elapsedTime = clock.getElapsedTime();
+      const elapsedTime = (performance.now() - startTime) / 1000;
 
       // Subtle breathing float
       botRoot.position.y = Math.sin(elapsedTime * 2.2) * 0.06;
 
       // Realistic 3D head pitch & yaw matching cursor direction
-      // Inverted axes so head pivots toward cursor
       const targetRotY = mouseNorm.current.x * 0.45;
       const targetRotX = -mouseNorm.current.y * 0.35;
       const targetTiltZ = -mouseNorm.current.x * 0.08;
