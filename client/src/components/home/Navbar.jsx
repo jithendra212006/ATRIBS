@@ -12,7 +12,6 @@ const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "Our Forte", href: "/#ourforte" },
   { label: "Services", href: "/#services" },
-  { label: "Work", href: "/#work" },
   { label: "Careers", href: "/#careers" },
 ];
 

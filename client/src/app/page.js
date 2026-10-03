@@ -6,6 +6,7 @@ import Solutions from "@/components/home/Solutions";
 import ServicesSection from "@/components/home/ServicesSection";
 import GlobalConnections from "@/components/home/GlobalConnections";
 import TechStackIntegrations from "@/components/home/TechStackIntegrations";
+import Footer from "@/components/home/Footer";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
       <GlobalConnections />
 
       <TechStackIntegrations />
+
+      <Footer />
     </main>
   );
 }
